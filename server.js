@@ -6,11 +6,10 @@ const bodyParser = require('body-parser');
 const messages = require('./routes/classifieds');
 const port = process.env.PORT || 3000;
 
-app.use('/classifieds',messages);
-
 app.use(bodyParser.json());
-
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use('/classifieds',messages);
 
 app.listen(port, () => {
   console.log('Listening on port', port);
