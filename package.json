@@ -4,7 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon",
     "test": "mocha",
     "knex": "knex",
     "heroku-postbuild": "knex migrate:latest"
@@ -24,7 +24,7 @@
     "mocha": "^3.2.0",
     "supertest": "^2.0.1"
   },
-  "engines": { 
+  "engines": {
     "node": "7.1.0"
   }
 }
